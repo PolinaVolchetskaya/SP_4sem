@@ -1,0 +1,13 @@
+polin@DESKTOP-FA4VIB4 MINGW64 ~/Documents/University/SP_4sem (master)
+$ git log
+commit ba27799fc28d61392b0085acc4a899ddccd9c924 (HEAD -> master)
+Author: PolinaVolchetskaya <pvolchetskaya0311@gmail.com>
+Date:   Mon Feb 17 17:21:11 2020 +0300
+
+    add status
+
+commit 9a94a97d107b9d7916986a7a4cda3804e68a13ec
+Author: PolinaVolchetskaya <pvolchetskaya0311@gmail.com>
+Date:   Mon Feb 17 17:11:59 2020 +0300
+
+    add.gitignore
