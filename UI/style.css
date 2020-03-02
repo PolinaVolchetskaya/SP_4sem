@@ -1,0 +1,365 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    position: absolute;
+    float:left;
+    vertical-align:middle;
+    clear:both;
+    height:15%;
+    background: rgba(51, 0, 102, 0.15);
+    width: 100%;
+    font-family: Amiko;
+}
+.logo{
+    position:absolute;
+    top: 10%;
+    left: 15%;
+    width: 70px;
+    height: 70px;
+}
+.TW{
+    text-align: center;
+    color: rgba(51, 0, 102, 1);
+    font-size: 60px;
+    letter-spacing: 30%;
+    font-weight: 500;
+    margin: 10px;
+}
+.buttonEXIT{
+    position: absolute;
+    text-align: center;
+    top: 25%;
+    right: 15%;
+    font-size:20px;
+    border-radius: 20px;
+    width: 120px;
+    height: 40px;
+    background-color: rgba(51, 0, 102, 1);
+    color: rgba(255, 255, 255, 1);
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    float:left;
+    vertical-align:middle;
+    clear:both;
+    height:10%;
+    background: rgba(51, 0, 102, 0.25);
+    color: rgb(0, 0, 0);
+    width: 100%;
+    font-family: Amiko;
+}
+.Tw{
+    position:absolute;
+    top: 30%;
+    left:14%;
+    font-size:20px;
+}
+.PV{
+    position:absolute;
+    top: 15%;
+    left:30%;
+    font-size:15px;
+}
+.Ch{
+    text-align: right;
+    right: 15%;
+    top: 15%;
+    position:absolute;
+    font-size:14px;
+}
+
+.menu{
+    position: absolute;
+    top:15%;
+    left:0;
+    width: 27%;
+    height: 75%;
+    background:  rgba(153, 153, 153, 0.15);
+    overflow: auto;
+}
+
+.profile{
+    position: relative;
+    top: 5%;
+    left: 40%;
+    width: 53%;
+    height: 23%;
+    background: rgba(51, 0, 102, 0.5);
+    border-radius: 5%;
+}
+.profile img{
+    position:relative;
+    margin-top: 5%;
+    margin-left: 5%;
+    width: 30%;
+    height: 50%;
+    border-radius: 50%;
+}
+.userName{
+    position:relative;
+    text-align: left;
+    margin-top: 4%;
+    margin-left: 5%;
+    font-size: 1em;
+    color: rgba(0, 0, 0, 1);
+    font-family: Amiko;
+} 
+
+.filters{
+    position: relative;
+    top: 7%;
+    bottom: 10%;
+    left:40%;
+    width: 53%;
+    height: 65%;
+    background: rgba(51, 0, 102, 0.3);
+    border-radius: 5%;
+}
+.filtersHeader{
+    position: relative;
+    padding-top: 5%;
+    text-align: center;
+    font-size: 1em;
+    color: rgba(51, 0, 102, 1);
+    font-family: Amiko;
+}
+.filterDate{
+    text-align: left;
+    padding-left: 5%;
+    padding-top: 5%;
+    font-size: 14px;
+    color: rgba(51, 0, 102, 1);
+    font-family: Amiko;
+}
+.from{
+    text-align: left;
+    padding-left: 5%;
+    font-size: 12px;
+    color: rgba(51, 0, 102, 1);
+    font-family: Amiko;
+}
+.to{
+    text-align: left;
+    padding-left: 5%;
+    font-size: 12px;
+    color: rgba(51, 0, 102, 1);
+    font-family: Amiko;
+}
+.data{
+    position: absolute;
+    text-align: right;
+    right: 10%;
+    margin-top: 0px;
+    font-size: 12px;
+    color: rgb(146, 143, 143);
+    background-color: white;
+    font-family: Amiko;
+    width: 60%;
+    resize: none;
+    height: 5%;
+    border: none;
+    border-radius: 7px;
+}
+.filterUsername{
+    position: absolute;
+    text-align: left;
+    left: 5%;
+    top: 35%;
+    font-size: 14px;
+    color: rgba(51, 0, 102, 1);
+    font-family: Amiko;
+}
+.text{
+    position: relative;
+    margin-right: 10%;
+    margin-top: 2%;
+    font-size: 12px;
+    color: rgb(146, 143, 143);
+    background-color: white;
+    font-family: Amiko;
+    resize: none;
+    width: 90%;
+    height: 5%;
+    border: none;
+    border-radius: 8px;
+}
+.filterHashtags{
+    position: absolute;
+    text-align: left;
+    left: 5%;
+    top: 55%;
+    font-size: 14px;
+    color: rgba(51, 0, 102, 1);
+    font-family: Amiko;
+}
+
+.find{
+    position: absolute;
+    top: 80%;
+    left: 25%;
+    text-align: center;
+    font-size:1em;
+    width: 50%;
+    height: 10%;
+    font-family: Amiko;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(51, 0, 102, 1);
+    border-radius: 20px;
+}
+
+.buttonNewPost{
+    position: absolute;
+    right: 15%;
+    bottom: 15%;
+    border-radius: 50px;
+    width: 7%;
+    height: 12%;
+    background-color: rgba(51, 0, 102, 0.3);
+}
+.buttonNewPost img{
+    position:relative;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+}
+
+main{
+    position:absolute;
+    top:  100px;
+    left: 27%;
+    width: 73%;
+    height: 73%;
+    overflow: auto;
+}
+
+.post
+{
+    position: relative;
+    margin-top: 2%;
+    margin-left: 2%;
+    padding-bottom: 2%;
+    border-radius: 10px;
+    width: 65%;
+    background: rgba(153, 153, 153, 0.25);  
+}
+.photoUser{
+    position: relative;
+    margin-left: 2%;
+    margin-top: 2%;
+    width: 10%;
+    height: 15%;
+    border-radius: 50%;
+}
+.name{
+    display: inline;
+    position: absolute;
+    margin-left: 3%;
+    top: 10%;
+    font-size: 18px;
+    color: rgba(51, 0, 102, 1);
+    font-family: Amiko;
+}
+.time{
+    position: absolute;
+    top: 10%;
+    display: inline;
+    text-align: right;
+    right: 5%;
+    padding-top: 0px;
+    font-size: 14px;
+    color: rgba(51, 0, 102, 1);
+    font-family: Amiko;
+}
+.twitt{
+    position: relative;
+    margin-top: 1%;
+    margin-left: 2%;
+    width: 90%;
+    height: auto;
+    font-size: 18px;
+    color:  black;
+    background: unset;
+    font-family: Amiko;
+}
+.addPhoto{
+    position: relative;
+    margin-left: 2%;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    width: 30%;
+    height: 15%;
+}
+.tag{
+    position: relative;
+    padding-bottom: 2%;
+    padding-left: 2%;
+    font-size: 14px;
+    width: 90%;
+    height: auto;
+    color: rgba(51, 0, 102, 1);
+    background-color: unset;
+    font-family: Amiko;
+}
+.buttons{
+    display: inline-block;
+}
+.buttonLike{
+    position: absolute; 
+    bottom: 10%;
+    left: 90%;
+    right: 5%;
+    border-radius: 30%;
+    width: 5%;
+    background-color: unset;
+}
+.buttonLike img{
+    position:relative;
+    width: 100%;
+    border-radius: 30%;
+}
+.buttonEdit{
+    position: absolute;
+    bottom: 10%;
+    left: 3%;
+    border-radius: 30%;
+    width: 3%;
+    background-color: unset;
+}
+.buttonEdit img{
+    position:relative;
+    width: 100%;
+    border-radius: 10%;
+}
+.buttonDelete{
+    position: absolute; 
+    bottom: 10%;
+    left: 7%;
+    border-radius: 30%;
+    width: 3%;
+    background-color: unset;
+}
+.buttonDelete img{
+    position:relative;
+    width: 100%;
+    border-radius: 10%;
+}
+
+.buttonMore{
+    position: relative;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    left: 25%;
+    text-align: center;
+    font-size:16px;
+    width: 15%;
+    font-family: Amiko;
+    color: rgba(51, 0, 102, 1);
+    background-color: rgba(51, 0, 102, 0.15);
+    border-radius: 20px;
+}
