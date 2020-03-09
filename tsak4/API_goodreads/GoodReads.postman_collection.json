@@ -1,0 +1,96 @@
+{
+	"info": {
+		"_postman_id": "6d091372-914f-4bb5-b268-bcd1b7b24097",
+		"name": "GoodReads",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get_events.list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.goodreads.com/event/index.xml ?key=8bT86IJAPzo5Ab3uz2WUg&search[country_code]=US",
+					"protocol": "https",
+					"host": [
+						"www",
+						"goodreads",
+						"com"
+					],
+					"path": [
+						"event",
+						"index.xml "
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "8bT86IJAPzo5Ab3uz2WUg"
+						},
+						{
+							"key": "search[country_code]",
+							"value": "US"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_review.recent_reviews",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.goodreads.com/review/recent_reviews.xml?key=8bT86IJAPzo5Ab3uz2WUg",
+					"protocol": "https",
+					"host": [
+						"www",
+						"goodreads",
+						"com"
+					],
+					"path": [
+						"review",
+						"recent_reviews.xml"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "8bT86IJAPzo5Ab3uz2WUg"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_user.show",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.goodreads.com/user/show/111147458.xml?key=8bT86IJAPzo5Ab3uz2WUg",
+					"protocol": "https",
+					"host": [
+						"www",
+						"goodreads",
+						"com"
+					],
+					"path": [
+						"user",
+						"show",
+						"111147458.xml"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "8bT86IJAPzo5Ab3uz2WUg"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
