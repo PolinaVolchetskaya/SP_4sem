@@ -45,11 +45,7 @@ class PostCollection {
     }
 
     get(id) {
-        if (typeof id === 'string') {
-            return this._newPosts.find(post => post.id === id);
-        } else {
-            console.log('Incorrect type of id. You should use "string"');
-        }
+        return this._newPosts.find(post => post.id === id) || null;
     }
 
     static validate(post, params = ['id', 'description', 'createdAt', 'author', 'photoLink', 'hashtags', 'likes']) {
@@ -85,13 +81,6 @@ class PostCollection {
                 case 'hashtags':
                     if (post.hashtags) {
                         if (!post.hashtags.every(tag => typeof tag === 'string')) {
-                            return false;
-                        }
-                    }
-                    break;
-                case 'likes':
-                    if (post.likes) {
-                        if (!post.likes.every(like => typeof like === 'string')) {
                             return false;
                         }
                     }
