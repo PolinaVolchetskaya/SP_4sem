@@ -6,11 +6,7 @@ class PostCollection {
     }
 
     getPage(skip = 0, top = 10, filterConfig = undefined) {
-        if (typeof skip !== 'number' || typeof top !== 'number') {
-            console.log('Incorrect inputting type');
-            return;
-        }
-
+       
         if (filterConfig) {
             let returningPosts = this._newPosts;
 
@@ -22,7 +18,7 @@ class PostCollection {
                 } else if (param === 'dateFrom') {
                     returningPosts = returningPosts.filter(post => post.createdAt >= filterConfig.dateFrom);
                 } else if (param === 'dateTo') {
-                    returningPosts = returningPosts.filter(post => post.createdAt < filterConfig.dateTo);
+                    returningPosts = returningPosts.filter(post => post.createdAt <= filterConfig.dateTo);
                 } else if (param === 'author') {
                     returningPosts = returningPosts.filter(post => post.author === filterConfig.author);
                 }
