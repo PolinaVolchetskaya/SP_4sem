@@ -1,3 +1,5 @@
+package com.bsu.twitter.servlets;
+
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -10,8 +12,8 @@ public class Name extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String name = request.getParameter("name");
         if (name.length()>100){
-            throw new IOException("Name is larger than 100 symbols!");
+            throw new IOException("com.bsu.twitter.servlets.Name is larger than 100 symbols!");
         }
-        response.getWriter().write("Name is " + name);
+        response.getWriter().write("com.bsu.twitter.servlets.Name is " + name);
     }
 }

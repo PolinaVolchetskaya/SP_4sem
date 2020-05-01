@@ -1,3 +1,5 @@
+package com.bsu.twitter.entity;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -26,7 +28,7 @@ public class Tweets {
 
     public Tweet getTweet(String id){
         //return tweets.get(Integer.parseInt(id)-1);
-        //if (tweets.stream().filter(tweet->tweet.getId().equals(id)))
+        //if (tweets.stream().com.bsu.twitter.filter(tweet->tweet.getId().equals(id)))
         for(Tweet tweet: tweets) {
             if(tweet.getId().equals(id)) {
                 return tweet;

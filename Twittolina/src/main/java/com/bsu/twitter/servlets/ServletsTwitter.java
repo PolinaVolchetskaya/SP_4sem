@@ -1,3 +1,7 @@
+package com.bsu.twitter.servlets;
+
+import com.bsu.twitter.entity.Tweet;
+import com.bsu.twitter.entity.Tweets;
 import com.google.gson.Gson;
 
 import javax.servlet.ServletException;
