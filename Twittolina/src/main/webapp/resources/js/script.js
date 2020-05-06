@@ -2,6 +2,7 @@ class Model {
     _newPosts = [];
 
     constructor(posts) {
+        posts = posts || [];
         //this._newPosts = posts.concat();
         this._posts = posts.filter(post => this.validate(post));
     }
@@ -147,16 +148,6 @@ let tweets = new Model([
         photoLink: 'https://www.pressball.by/images/stories/2020/03/20200310231542.jpg',
         hashtags: ['coronavirus', 'коронавирус'],
         likes: ['Иван Иванов', 'polina_volchetskaya']
-    },
-
-    {
-        id: '2',
-        description: 'Hello world!',
-        createdAt: new Date('2020-02-16T21:23:00'),
-        author: 'alex.kurch',
-        photoLink: 'https://lh3.googleusercontent.com/proxy/FjNz-hqkbplN6HT5Sc2oO3jWXZeFvVE2grM_GsSF7DV0FS0o_s1xV-6t4fV0bYYkpWnaG3pLz8g4sUB3D-5zagqSPslKLbbcTlydnjLkmHWYiRqFPic0Jk9sUXe8LCJ6DvqX26iCvwVULtH6B1UZwOEEBxdxyC0AePW7CPGWy5ttwy4m1eK7pexEsONdsnkiI6LmcgEpw6G4dg',
-        hashtags: ['boy', 'poetry'],
-        likes: ['polina_volchetskaya']
     }
 ]);
 
@@ -166,31 +157,40 @@ function fillItemData(item, data) {
         let key = phElement.getAttribute('data-target');
 
         if (key == 'createdAt') {
-            phElement.textContent = String(data[key].toLocaleString())
-        }
-
-        if (key == 'hashtags') {
-            phElement.textContent = String(data.hashtags.map(temp => '#' + temp).join(' '));
+            phElement.textContent = String(data[key].toLocaleString('en-GB'))
+        } else if (key == 'hashtags') {
+            phElement.textContent = String(data.hashtags.map(temp => '#' + temp).join(' '))
         } else
-            phElement.textContent = String(data[key]);
+        {
+            phElement.textContent = String(data[key])
+        }
 
         if (key == 'author' && String(data[key]) == this.user) {
             item.firstElementChild.style.background = "rgba(153, 153, 153, 0.25)"
+            item.firstElementChild.querySelector('[class="buttonLike"]').style.visibility="visible"
+            item.firstElementChild.querySelector('[class="buttonEdit"]').style.visibility="visible"
+            item.firstElementChild.querySelector('[class="buttonDelete"]').style.visibility="visible"
+        } else if (key == 'author' && String(data[key]) != this.user) {
+            item.firstElementChild.style.background = "rgba(153, 153, 153, 0.25)"
+            item.firstElementChild.querySelector('[class="buttonLike"]').style.visibility="visible"
+            item.firstElementChild.querySelector('[class="buttonEdit"]').style.visibility="hidden"
+            item.firstElementChild.querySelector('[class="buttonDelete"]').style.visibility="hidden"
         }
-        phElement.textContent = String(data[key]);
     });
 
     item.firstElementChild.setAttribute('id', data.id)
 }
 
 class View {
+
     constructor() {
         this._Model = tweets;
     }
 
     user = 'Polina Volchetskaya';
     template = document.getElementById('tweet-template');
-    container = document.getElementById('posts');
+    container = document.getElementById('container');
+
 
     addItem(data) {
         let newTweet = document.importNode(this.template.content, true);
@@ -211,32 +211,8 @@ class View {
     delete(id = '') {
         document.getElementById(id).remove();
     }
+
 }
-
-
-//Tests
-// let view = new View();
-//
-// function add(post) {
-//     if (view._Model.add(post)) {
-//         view.addItem(post);
-//     }
-// }
-
-//
-// function edit(id, post) {
-//     if (view._Model.edit(id, post)) {
-//         return true;
-//     }
-//     return false;
-// }
-//
-// function remove(id) {
-//     if (view._Model.remove(id)) {
-//         return true;
-//     }
-//     return false;
-// }
 
 //Testing
 let view
@@ -267,8 +243,50 @@ function editPost(id, post) {
     }
 }
 
+// console tests
+/*
+addPost({id: '9',
+          description: 'Happy New Year! :)',
+          createdAt: new Date('2020-01-01T00:01:10'),
+          author: 'polina_volchetskaya',
+          hashtags: ['newyear', 'christmas', 'friends']})
 
-//
+addPost({id: '10',
+          description: 'Hello! :)',
+          createdAt: new Date('2020-01-01T00:01:10'),
+          author: 'polina_volchetskaya',
+          hashtags: ['newyear', 'christmas', 'friends']})
+
+addPost({id: '11',
+          description: 'Happy New Year! :)',
+          createdAt: new Date('2020-01-01T00:01:10'),
+          author: 'p',
+          hashtags: ['newyear', 'christmas', 'friends']})
+
+addPost({id: '12',
+          description: ':)',
+          createdAt: new Date,
+          author: 'a',
+          hashtags: ['newyear', 'christmas', 'friends']})
+*/
+
+//addPost({id: '9',
+//          description: 'Happy New Year! :)',
+//          createdAt: new Date('2020-01-01T00:01:10'),
+//          author: 'polina_volchetskaya',
+//          photoLink: 'https://avatars.mds.yandex.net/get-pdb/1748857/1578302b-716c-4120-ba1a-cef6566cd324/s600',
+//          hashtags: ['newyear', 'christmas', 'friends'],
+//          likes: ['sstrazdina', 'alex.kurch']})
+
+//editPost('9',{
+//          description: ':)',
+//          createdAt: new Date('2020-01-01T00:01:10'),
+//          author: 'polina_volchetskaya',
+//          photoLink: 'https://avatars.mds.yandex.net/get-pdb/1748857/1578302b-716c-4120-ba1a-cef6566cd324/s600',
+//          hashtags: ['newyear', 'christmas', 'friends'],
+//          likes: ['sstrazdina', 'alex.kurch']})
+
+ //
 //     {
 //         id: '3',
 //         description: 'HB-day, Faculty of Applied Mathematics and Computer Science! The best faculty!',
