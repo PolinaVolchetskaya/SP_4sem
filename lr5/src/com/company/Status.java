@@ -1,3 +1,5 @@
+package com.company;
+
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -8,6 +10,6 @@ import java.io.IOException;
 public class Status extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        response.getWriter().write("<p style='color:red'>Application Is Running</p>");
+        response.getWriter().write("Application Is Running");
     }
 }

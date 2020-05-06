@@ -191,6 +191,7 @@ class View {
     template = document.getElementById('tweet-template');
     container = document.getElementById('container');
 
+
     addItem(data) {
         let newTweet = document.importNode(this.template.content, true);
         fillItemData(newTweet, data);
@@ -285,7 +286,7 @@ addPost({id: '12',
 //          hashtags: ['newyear', 'christmas', 'friends'],
 //          likes: ['sstrazdina', 'alex.kurch']})
 
-//
+ //
 //     {
 //         id: '3',
 //         description: 'HB-day, Faculty of Applied Mathematics and Computer Science! The best faculty!',
