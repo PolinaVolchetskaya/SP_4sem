@@ -124,7 +124,7 @@ footer{
     font-size: 1rem;
     color: rgba(0, 0, 0, 1);
     font-family: Amiko;
-} 
+}
 
 .filters{
     position: relative;
@@ -256,7 +256,7 @@ main{
     margin: 1rem;
     border-radius: 0.8rem;
     width: 65%;
-    background: rgba(153, 153, 153, 0.25);  
+    background: rgba(153, 153, 153, 0.25);
 }
 .photoUser{
     position: relative;
@@ -268,9 +268,9 @@ main{
 }
 .name{
     display: inline;
-    position: absolute;
-    left: 5.5rem;
-    top: 1.5rem;
+    position: relative;
+    left: 1rem;
+    top: 1rem;
     font-size: 1.5rem;
     color: rgba(51, 0, 102, 1);
     font-family: Amiko;
@@ -278,8 +278,9 @@ main{
 .time{
     display: inline;
     position: absolute;
-    top: 1.9rem;
+    top: 1rem;
     text-align: right;
+    left: 70%;
     right: 1rem;
     font-size: 1rem;
     color: rgba(51, 0, 102, 1);
@@ -287,7 +288,7 @@ main{
 }
 .twitt{
     position: relative;
-    top: 0.5rem;
+    top: 1rem;
     left: 1rem;
     width: 90%;
     height: auto;
@@ -320,7 +321,7 @@ main{
     display: inline-block;
 }
 .buttonLike{
-    position: absolute; 
+    position: absolute;
     bottom: 1rem;
     left: 90%;
     right: 5%;
@@ -347,7 +348,7 @@ main{
     border-radius: 0.5rem;
 }
 .buttonDelete{
-    position: absolute; 
+    position: absolute;
     bottom: 1rem;
     left: 4rem;
     border-radius: 0.5rem;
@@ -362,7 +363,7 @@ main{
 
 .buttonMore{
     position: relative;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     margin-bottom: 1.2rem;
     left: 28%;
     text-align: center;
