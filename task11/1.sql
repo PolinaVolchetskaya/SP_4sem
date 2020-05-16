@@ -1,0 +1,1 @@
+SELECT * FROM twittolina.post order by CREATED_AT DESC
