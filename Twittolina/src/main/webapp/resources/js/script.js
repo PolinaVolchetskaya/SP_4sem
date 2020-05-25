@@ -412,5 +412,3 @@ class App {
 }
 
 let app = new App();
-
-
